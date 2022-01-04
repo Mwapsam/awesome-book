@@ -7,25 +7,25 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <section>
-      <div id="booksList">
-        <h1>Awesome Books</h1>
-      </div>
-      <div>
-        <form action="">
-          <label for="title"></label><br />
-          <input type="text" id="title" name="title" value="Title" /><br />
-          <label for="auther"></label><br />
-          <input
-            type="text"
-            id="author"
-            name="author"
-            value="Author"
-          /><br /><br />
-          <button id="submit" type="submit" onclick="addItem()">Add</button>
-        </form>
-      </div>
-    </section>
+    <h1>Awesome Books</h1>
+    <ul class="list_present">
+      <li>
+        <h3>No books available yet!</h3>
+      </li>
+    </ul>
+    <form class="addBookForm">
+      <ul>
+        <li>
+          <input type="text" id="book_title" placeholder="Tile" />
+        </li>
+        <li>
+          <input type="text" id="book_author" placeholder="Author" />
+        </li>
+        <li>
+          <input type="button" value="Add" id="add_book" />
+        </li>
+      </ul>
+    </form>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

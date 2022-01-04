@@ -1,53 +1,76 @@
-const container = document.getElementById('booksList');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
+const titleInput = document.querySelector('#book_title');
+const authorInput = document.querySelector('#book_author');
+const addBookBtn = document.querySelector('#add_book');
+const addForm = document.querySelector('.addBookForm');
+const bookList = document.querySelector('.list_present');
 
-let books = [];
+let booksData = [];
 
-function data() {
-  books.forEach((book) => {
-    container.innerHTML += `
-        <p>${book.author}</p>
-        <p>${book.title}</p>
-        <input type="button" value="Remove" id="${book.id}" onClick="removeItem('${book.id}')"/>
-        <hr>
-        `;
-  });
-}
+function addBook() {
+  const titleValue = titleInput.value;
+  const authorValue = authorInput.value;
 
-function addItem() {
-  const bookId = Math.random().toString(36).slice(2);
-  books = JSON.parse(localStorage.getItem('books'));
-  const inputForm = {
-    Id: bookId,
-    title: title.value,
-    author: author.value,
-  };
-  books.push(inputForm);
-  localStorage.setItem('books', JSON.stringify(books));
-  data();
-}
+  if (titleValue !== '' && authorValue !== '') {
+    if (booksData.length === 0) {
+      bookList.innerHTML = '';
+    }
 
-const formData = document.querySelectorAll('input');
-for (let form of formData) {
-  form.addEventListener('change', () => {
-    addItem();
-  });
-}
+    const bookId = Math.random().toString(36).slice(2);
+    booksData.unshift({
+      id: bookId,
+      title: titleValue,
+      author: authorValue,
+    });
 
-function removeItem(bookId) {
-  books = JSON.parse(localStorage.getItem('books'));
-  books = books.filter((e) => e.id !== bookId);
-  console.log(books);
-  localStorage.setItem('books', JSON.stringify(books));
-}
+    localStorage.setItem('bookData', JSON.stringify(booksData));
+    addForm.reset();
 
-const getFormData = JSON.parse(localStorage.getItem('books'));
-function getFormDataStorage() {
-  if (getFormData !== null) {
-    books = getFormData;
-    data();
+    bookList.innerHTML = `<li>
+                            <h3> ${titleValue} </h3>
+                            <p>by - ${authorValue} </p>
+                            <input type="button" value="Remove" id="${bookId}" class="removeBook" onClick="removeBook('${bookId}')"/>
+                        </li>${bookList.innerHTML}`;
   }
 }
 
-window.onresize = getFormDataStorage();
+addBookBtn.addEventListener('click', addBook);
+
+function buildBookLists(book) {
+  const bookData = `<li>
+                          <h3> ${book.title} </h3>
+                          <p>by - ${book.author} </p>
+                          <input type="button" value="Remove" id="${book.id}" onClick="removeBook('${book.id}')"/>
+                      </li>`;
+  return bookData;
+}
+
+function readBookData() {
+  let booksBuild = '';
+  if (booksData.length > 0) {
+    booksData.forEach((books) => {
+      booksBuild += buildBookLists(books);
+    });
+  } else {
+    booksBuild = '<li><h3>No books available yet!</h3></li>';
+  }
+
+  bookList.innerHTML = booksBuild;
+}
+
+// eslint-disable-next-line no-unused-vars
+function removeBook(bookId) {
+  booksData = booksData.filter((books) => books.id !== bookId);
+  localStorage.setItem('bookData', JSON.stringify(booksData));
+  readBookData();
+}
+// Fetch data from localstorage
+
+const localStorageData = JSON.parse(localStorage.getItem('bookData'));
+function getLocalStorageData() {
+  if (localStorageData !== null) {
+    booksData = localStorageData;
+    readBookData();
+  }
+}
+
+window.onresize = getLocalStorageData();
