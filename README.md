@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome books
 
-> One paragraph statement about the project.
+> "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,50 +10,37 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JAVASCRIPT
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://jihaneh.github.io/AwesomeBooksModule/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+Download the project, unzip it and open index.html file in the browser
 
 ## Authors
 
-👤 **Author1**
+👤 **Ahmed TA**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ahmedtaa](https://github.com/ahmedtaa)
+- Twitter: [@\_ahmedta](https://twitter.com/_ahmedta)
+- LinkedIn: [Ahmed](https://www.linkedin.com/in/ahmed-el-rakhawy-822ba225/)
 
-👤 **Author2**
+👤 **Samuel Chimfwembe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Mwapsam](https://github.com/Mwapsam)
+- Twitter: [@Mwapsam](https://github.com/Mwapsam)
+- LinkedIn: [Samuel](https://www.linkedin.com/in/mwape-samuel-09a688110/)
+
+👤 **JihaneH**
+
+- GitHub: [@jihaneH](https://github.com/jihaneH)
+- Twitter: [@jijihaddad](https://twitter.com/jijihaddad)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/jihane-haddad/)
 
 ## 🤝 Contributing
 
@@ -64,12 +51,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

@@ -1,0 +1,181 @@
+/* AWESOME BOOKS */
+
+* {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#book_list,
+#add_books,
+#contact-information {
+  flex-grow: 3;
+}
+
+.navigation-bar,
+footer {
+  display: flex;
+  border: 3px solid black;
+  margin: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navigation-bar ul {
+  list-style: none;
+  display: flex;
+  font-size: 13px;
+  padding-left: 0;
+}
+
+.navigation-bar ul li a {
+  color: #000;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding: 0 1rem;
+}
+
+.navigation-bar ul li:nth-last-child(1) a {
+  border-right: none;
+  padding-right: 0;
+}
+
+form h2 {
+  margin-top: 30px;
+}
+
+.navigation-bar h2 {
+  font-size: 16px;
+}
+
+.navigation-bar ul li:nth-last-child(3) a {
+  color: rgb(58, 169, 206);
+}
+
+.date {
+  font-size: 14px;
+  text-align: end;
+  margin-right: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+#book_collection {
+  margin: 10px 10px 50px 10px;
+}
+
+#book_list li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#book_list li:nth-child(odd) {
+  background-color: #80808057;
+}
+
+.contact-information ul {
+  margin-top: 2rem;
+}
+
+#book_list ul {
+  list-style: none;
+  padding-left: 0;
+  border: 3px solid black;
+}
+
+#book_collection button,
+#add_button {
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 3px 2px 1px black;
+}
+
+form {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin: 10px;
+  width: 70%;
+  border: 2px solid black;
+}
+
+#add_button {
+  align-self: flex-end;
+  width: auto;
+  margin-right: 3.75rem;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-information h2 {
+  margin: 2.5rem 1rem;
+  align-self: center;
+}
+
+.contact-information p {
+  margin: 0 2rem;
+}
+
+.collapse {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  #book_collection {
+    width: 60%;
+    margin: 50px auto;
+  }
+
+  hr {
+    margin-top: 50px;
+  }
+
+  form {
+    width: 25%;
+    margin: auto;
+  }
+
+  #add_button {
+    margin-right: 4rem;
+  }
+
+  #book_collection button:hover,
+  #add_button:hover {
+    background-color: #1b1b1b57;
+    color: #fff;
+  }
+
+  .navigation-bar h2 {
+    font-size: 22px;
+  }
+
+  .navigation-bar ul {
+    font-size: 18px;
+  }
+
+  .contact-information {
+    align-self: center;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./index.css" />
+
+  <title>Awesome Books</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navigation-bar">
+      <h2>Awesome Books</h2>
+      <ul>
+        <li><a class="active" id="list" href="#book_list">List</a></li>
+        <li><a id="add_new" href="#add_books">Add New</a></li>
+        <li><a id="contact" href="#contact-information">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="date"></p>
+  </header>
+  <section id="book_list">
+    <h1>Awesome Books</h1>
+    <ul id="book_collection"></ul>
+  </section>
+  <section id="add_books" class="collapse">
+    <form>
+      <h2>Add a new Book</h2>
+      <input type="text" class="text" name="title" placeholder="Title" required />
+      <input type="text" class="text" name="author" placeholder="Author" required />
+      <small class="message"></small>
+      <input id="add_button" type="button" value="Add" />
+    </form>
+  </section>
+  <section id="contact-information" class="collapse contact-information">
+    <h2>Contact Information</h2>
+    <p>Do you have any questions or you just want to say "Hello"?</p>
+    <p>You can reach out to us !</p>
+    <ul>
+      <li>Email : mail@mail.com</li>
+      <li>Phone : 0987654321</li>
+      <li>Address : Streetname 23, 55678 Madrid, Spain</li>
+    </ul>
+  </section>
+  <footer>
+    <h2>Copyright</h2>
+  </footer>
+  <script type="module" src="./luxon.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>
